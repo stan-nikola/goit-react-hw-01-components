@@ -1,13 +1,19 @@
 {
   "files": {
-    "main.css": "/goit-react-hw-01-components/static/css/main.477f7786.css",
-    "main.js": "/goit-react-hw-01-components/static/js/main.176e2d52.js",
+    "main.css": "/goit-react-hw-01-components/static/css/main.24aaca21.css",
+    "main.js": "/goit-react-hw-01-components/static/js/main.626bb684.js",
+    "static/media/armata-v19-latin-regular.svg": "/goit-react-hw-01-components/static/media/armata-v19-latin-regular.f00b8e05fd0338a93e5f.svg",
+    "static/media/armata-v19-latin-regular.ttf": "/goit-react-hw-01-components/static/media/armata-v19-latin-regular.72f20ce001657e3b9ec1.ttf",
+    "static/media/armata-v19-latin-regular.woff": "/goit-react-hw-01-components/static/media/armata-v19-latin-regular.99eacc5aa947d173bdd2.woff",
+    "static/media/armata-v19-latin-regular.eot": "/goit-react-hw-01-components/static/media/armata-v19-latin-regular.2c65091a5fd5b4119ab2.eot",
+    "static/media/armata-v19-latin-regular.woff2": "/goit-react-hw-01-components/static/media/armata-v19-latin-regular.84beb6e8e7fdf7bdc15a.woff2",
+    "static/media/defaultAvatar1.png": "/goit-react-hw-01-components/static/media/defaultAvatar1.fbfe03c21b01b8a17b01.png",
     "index.html": "/goit-react-hw-01-components/index.html",
-    "main.477f7786.css.map": "/goit-react-hw-01-components/static/css/main.477f7786.css.map",
-    "main.176e2d52.js.map": "/goit-react-hw-01-components/static/js/main.176e2d52.js.map"
+    "main.24aaca21.css.map": "/goit-react-hw-01-components/static/css/main.24aaca21.css.map",
+    "main.626bb684.js.map": "/goit-react-hw-01-components/static/js/main.626bb684.js.map"
   },
   "entrypoints": [
-    "static/css/main.477f7786.css",
-    "static/js/main.176e2d52.js"
+    "static/css/main.24aaca21.css",
+    "static/js/main.626bb684.js"
   ]
 }
