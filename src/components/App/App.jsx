@@ -8,13 +8,15 @@ import statDada from '../Statistics/data.json';
 import friends from '../FriendList/friends.json';
 import transactions from '../TransactionHistory/transactions.json';
 
+import { Container } from './App.styled';
+
 export const App = () => {
   return (
-    <div>
+    <Container>
       <Profile profiles={users} />
       <Statistics stats={statDada} title={'Upload stats'} />
       <FriendList friends={friends} />
       <TransactionHistory transactItems={transactions} />
-    </div>
+    </Container>
   );
 };

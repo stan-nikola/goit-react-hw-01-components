@@ -1,33 +1,62 @@
 import PropTypes from 'prop-types'; // ES6
+import {
+  FaTag,
+  FaMapMarkerAlt,
+  FaUsers,
+  FaRegThumbsUp,
+  FaEye,
+} from 'react-icons/fa';
+import {
+  ProfileCard,
+  ProfileDescription,
+  ProfileAvatar,
+  ProfileName,
+  ProfileInfo,
+  ProfileStats,
+  StatsList,
+  StatsItem,
+} from './Profile.styled';
 
 export const Profile = ({ profiles }) => {
   return (
-    <div>
+    <>
       {profiles.map(({ username, tag, location, avatar, stats }) => (
-        <div key={username} className="profile">
-          <div className="description">
-            <img src={avatar} alt={username} className="avatar" />
-            <p className="name">{username}</p>
-            <p className="tag">{tag}</p>
-            <p className="location">{location}</p>
-          </div>
-          <ul className="stats">
-            <li>
-              <span className="label">Followers</span>
-              <span className="quantity">{stats.followers}</span>
-            </li>
-            <li>
-              <span className="label">Views</span>
-              <span className="quantity">{stats.views}</span>
-            </li>
-            <li>
-              <span className="label">Likes</span>
-              <span className="quantity">{stats.likes}</span>
-            </li>
-          </ul>
-        </div>
+        <ProfileCard key={username}>
+          <ProfileDescription>
+            <ProfileAvatar src={avatar} alt={username} className="avatar" />
+            <ProfileName>{username}</ProfileName>
+            <ProfileInfo>
+              <FaTag />
+              {tag}
+            </ProfileInfo>
+            <ProfileInfo>
+              <FaMapMarkerAlt />
+              {location}
+            </ProfileInfo>
+          </ProfileDescription>
+          <ProfileStats>
+            <StatsList>
+              <StatsItem>
+                <FaUsers />
+                {stats.followers}
+              </StatsItem>
+            </StatsList>
+            <StatsList>
+              <StatsItem>
+                <FaEye />
+                {stats.views}
+              </StatsItem>
+            </StatsList>
+            <StatsList>
+              <StatsItem>
+                <FaRegThumbsUp />
+                {stats.likes}
+              </StatsItem>
+            </StatsList>
+          </ProfileStats>
+        </ProfileCard>
       ))}
-    </div>
+    </>
   );
 };
 
