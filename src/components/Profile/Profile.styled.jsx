@@ -2,21 +2,21 @@ import styled from '@emotion/styled';
 
 export const ProfileCard = styled.div`
   width: 300px;
-  background-color: #ffffff;
+  height: 332px;
+  background-color: ${props => props.theme.colors.cardBg};
   text-align: center;
-  padding: 8px;
-  border-radius: 3px;
-  margin-bottom: 14px;
-
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: ${props => props.theme.spacing(1)};
+  box-shadow: ${props => props.theme.boxShadow.mainCard};
+  overflow: hidden;
+  margin-bottom: ${props => props.theme.spacing(4)};
   svg {
-    margin-right: 8px;
-    color: #125782;
+    margin-right: ${props => props.theme.spacing(2)};
+    color: ${props => props.theme.colors.svgIcon};
   }
 `;
 
 export const ProfileDescription = styled.div`
-  margin-bottom: 15px;
+  margin-bottom: ${props => props.theme.spacing(4)};
 `;
 
 export const ProfileAvatar = styled.img`
@@ -24,13 +24,14 @@ export const ProfileAvatar = styled.img`
   height: 100px;
   border-radius: 50%;
   background-color: #1f89cb;
-  margin-bottom: 10px;
+  margin-top: ${props => props.theme.spacing(14)};
+  margin-bottom: ${props => props.theme.spacing(8)};
 `;
 
 export const ProfileName = styled.p`
   font-size: 20px;
   font-weight: 900;
-  margin-bottom: 10px;
+  margin-bottom: ${props => props.theme.spacing(3)};
 `;
 export const ProfileInfo = styled.p`
   display: flex;
@@ -38,17 +39,20 @@ export const ProfileInfo = styled.p`
   justify-content: center;
 
   &:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: ${props => props.theme.spacing(2)};
   }
 `;
 export const ProfileStats = styled.ul`
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  margin-bottom: 10px;
+  justify-content: space-around;
+  height: 48px;
+  background-color: ${props => props.theme.colors.cardBg};
 `;
 
-export const StatsList = styled.li``;
+export const StatsList = styled.li`
+  /* width: calc(100% / 3); */
+`;
 
 export const StatsItem = styled.span`
   display: flex;

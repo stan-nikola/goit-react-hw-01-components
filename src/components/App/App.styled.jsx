@@ -2,5 +2,13 @@ import styled from '@emotion/styled';
 
 export const Container = styled.div`
   padding: 8px;
-  background-color: #e0ebf1;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+`;
+
+export const ProfileStats = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
