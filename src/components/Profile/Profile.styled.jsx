@@ -47,7 +47,7 @@ export const ProfileStats = styled.ul`
   align-items: center;
   justify-content: space-around;
   height: 48px;
-  background-color: ${props => props.theme.colors.cardBg};
+  background-color: ${props => props.theme.colors.itemBgSecondary};
 `;
 
 export const StatsList = styled.li`

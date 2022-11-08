@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const StatisticCard = styled.section`
   width: 300px;
-  height: 104px;
+
   border-radius: ${props => props.theme.spacing(1)};
   background-color: #fff;
   box-shadow: ${props => props.theme.boxShadow.mainCard};
@@ -13,6 +13,7 @@ export const StatisticTitle = styled.h2`
   font-size: 20px;
   font-weight: 900;
   text-align: center;
+  text-transform: uppercase;
   margin: ${props => props.theme.spacing(4)} 0;
 `;
 
@@ -20,8 +21,8 @@ export const StatisticList = styled.ul`
   display: flex;
 `;
 
-function setBgColor({ type }) {
-  switch (type) {
+function setBgColor({ fileName }) {
+  switch (fileName) {
     case '.docx':
       return props => props.theme.colors.statDocx;
     case '.pdf':
@@ -39,16 +40,16 @@ export const StatisticItem = styled.li`
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 
   width: calc(100% / 5);
-  height: 50px;
+  height: 54px;
   background-color: ${setBgColor};
 
   box-shadow: ${props => props.theme.boxShadow.statItem};
 `;
 
 export const StatisticPercent = styled.span`
-  font-style: 18px;
+  font-size: 18px;
   font-weight: 600;
 `;
