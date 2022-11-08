@@ -4,7 +4,7 @@ export const StatisticCard = styled.section`
   width: 300px;
 
   border-radius: ${props => props.theme.spacing(1)};
-  background-color: #fff;
+  background-color: ${props => props.theme.colors.cardBg};
   box-shadow: ${props => props.theme.boxShadow.mainCard};
   overflow: hidden;
 `;

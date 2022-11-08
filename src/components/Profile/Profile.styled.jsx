@@ -23,14 +23,16 @@ export const ProfileAvatar = styled.img`
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: #1f89cb;
+  background-color: ${props => props.theme.colors.avatar};
   margin-top: ${props => props.theme.spacing(14)};
   margin-bottom: ${props => props.theme.spacing(8)};
+  box-shadow: ${props => props.theme.boxShadow.secondaryCard};
 `;
 
 export const ProfileName = styled.p`
   font-size: 20px;
   font-weight: 900;
+  font-family: 'Armata';
   margin-bottom: ${props => props.theme.spacing(3)};
 `;
 export const ProfileInfo = styled.p`
