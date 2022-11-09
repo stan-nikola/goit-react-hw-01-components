@@ -20,6 +20,8 @@ export const StatisticTitle = styled.h2`
 
 export const StatisticList = styled.ul`
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 function setBgColor({ fileName }) {
@@ -32,13 +34,22 @@ function setBgColor({ fileName }) {
       return props => props.theme.colors.statMp3;
     case '.psd':
       return props => props.theme.colors.statPsd;
+    case '.gif':
+      return props => props.theme.colors.statGif;
+    case '.zip':
+      return props => props.theme.colors.statZip;
+    case '.txt':
+      return props => props.theme.colors.statTxt;
+    case '.xls':
+      return props => props.theme.colors.statXls;
+
     default:
       return props => props.theme.colors.statDefault;
   }
 }
 export const StatisticItem = styled.li`
   display: flex;
-  flex-wrap: wrap;
+
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
