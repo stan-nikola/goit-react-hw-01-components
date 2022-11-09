@@ -4,7 +4,6 @@ import { FriendList } from 'components/FriendList/FriendList';
 import { TransactionHistory } from 'components/TransactionHistory/TransactionHistory';
 
 import user from '../../data/user.json';
-// import {  } from "../../";
 import statDada from '../../data/data.json';
 import friends from '../../data/friends.json';
 import transactions from '../../data/transactions.json';
