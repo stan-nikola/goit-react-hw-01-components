@@ -7,7 +7,7 @@ export const FriendsCard = styled.ul`
   width: 300px;
   background-color: ${props => props.theme.colors.cardBg};
   border-radius: ${props => props.theme.spacing(1)};
-  padding: ${props => props.theme.spacing(4)} 0;
+  padding: ${props => props.theme.spacing(2)} 0;
 `;
 
 export const FriendItem = styled.li`

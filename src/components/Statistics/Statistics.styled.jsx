@@ -7,6 +7,7 @@ export const StatisticCard = styled.section`
   background-color: ${props => props.theme.colors.cardBg};
   box-shadow: ${props => props.theme.boxShadow.mainCard};
   overflow: hidden;
+  margin-top: ${props => props.theme.spacing(4)};
 `;
 
 export const StatisticTitle = styled.h2`

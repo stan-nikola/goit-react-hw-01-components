@@ -8,7 +8,7 @@ export const ProfileCard = styled.div`
   border-radius: ${props => props.theme.spacing(1)};
   box-shadow: ${props => props.theme.boxShadow.mainCard};
   overflow: hidden;
-  margin-bottom: ${props => props.theme.spacing(4)};
+
   svg {
     margin-right: ${props => props.theme.spacing(2)};
     color: ${props => props.theme.colors.svgIcon};
