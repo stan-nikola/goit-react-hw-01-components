@@ -1,25 +1,32 @@
 import PropTypes from 'prop-types';
+import { Box } from 'components/Box';
 import {
-  StatisticCard,
   StatisticTitle,
-  StatisticList,
   StatisticItem,
   StatisticPercent,
 } from './Statistics.styled';
 
 export const Statistics = ({ stats, title = '' }) => {
   return (
-    <StatisticCard>
+    <Box
+      width={300}
+      borderRadius={'normal'}
+      bg="cardBg"
+      overflow="hidden"
+      mt={4}
+      boxShadow="mainCard"
+      as="div"
+    >
       {title && <StatisticTitle>{title}</StatisticTitle>}
-      <StatisticList>
+      <Box display="flex" flexWrap="wrap" as="ul" justifyContent="center">
         {stats.map(({ id, label, percentage }) => (
           <StatisticItem key={id} fileName={label}>
             <span>{label}</span>
             <StatisticPercent>{percentage}%</StatisticPercent>
           </StatisticItem>
         ))}
-      </StatisticList>
-    </StatisticCard>
+      </Box>
+    </Box>
   );
 };
 

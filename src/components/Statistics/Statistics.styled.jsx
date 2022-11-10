@@ -1,27 +1,11 @@
 import styled from '@emotion/styled';
 
-export const StatisticCard = styled.section`
-  width: 300px;
-
-  border-radius: ${props => props.theme.spacing(1)};
-  background-color: ${props => props.theme.colors.cardBg};
-  box-shadow: ${props => props.theme.boxShadow.mainCard};
-  overflow: hidden;
-  margin-top: ${props => props.theme.spacing(4)};
-`;
-
 export const StatisticTitle = styled.h2`
-  font-size: 20px;
-  font-weight: 900;
+  font-size: ${p => p.theme.fontSizes.m};
+  font-weight: ${p => p.theme.fontWeights.bold};
   text-align: center;
   text-transform: uppercase;
-  margin: ${props => props.theme.spacing(4)} 0;
-`;
-
-export const StatisticList = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  margin: ${props => props.theme.space[4]}px 0;
 `;
 
 function setBgColor({ fileName }) {
@@ -49,19 +33,16 @@ function setBgColor({ fileName }) {
 }
 export const StatisticItem = styled.li`
   display: flex;
-
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-
   width: calc(100% / 5);
   height: 54px;
   background-color: ${setBgColor};
-
-  box-shadow: ${props => props.theme.boxShadow.statItem};
+  box-shadow: ${p => p.theme.shadows.cardItem};
 `;
 
 export const StatisticPercent = styled.span`
-  font-size: 18px;
-  font-weight: 600;
+  font-size: ${props => props.theme.fontSizes.m}px;
+  font-weight: ${props => props.theme.fontWeights.bold};
 `;

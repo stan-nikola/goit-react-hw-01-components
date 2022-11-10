@@ -1,4 +1,4 @@
-export const theme = Object.freeze({
+export const theme = {
   colors: {
     cardBg: '#ffffff',
     itemBg: '#cad0fca8',
@@ -18,12 +18,37 @@ export const theme = Object.freeze({
     statDefault: '#e6367fc5',
     tableHead: '#7266d1',
   },
-  spacing: value => `${4 * value}px`,
-  boxShadow: {
+  space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
+
+  shadows: {
     mainCard: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
-    statItem:
+    cardItem:
       'rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;',
     secondaryCard:
       'rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;',
   },
-});
+  borders: {
+    none: 'none',
+    normal: '1px solid',
+  },
+  radii: {
+    none: '0',
+    normal: '4px',
+    round: '50%',
+  },
+  fontSizes: {
+    xs: '12px',
+    s: '14px',
+    m: '18px',
+    l: '24px',
+    xl: '32px',
+  },
+  fontWeights: {
+    normal: 400,
+    bold: 700,
+  },
+
+  fonts: {
+    Armata: 'Armata',
+  },
+};

@@ -2,38 +2,36 @@ import styled from '@emotion/styled';
 
 export const ProfileCard = styled.div`
   width: 300px;
-  height: 332px;
   background-color: ${props => props.theme.colors.cardBg};
   text-align: center;
-  border-radius: ${props => props.theme.spacing(1)};
-  box-shadow: ${props => props.theme.boxShadow.mainCard};
+  border-radius: ${props => props.theme.radii.normal};
   overflow: hidden;
 
   svg {
-    margin-right: ${props => props.theme.spacing(2)};
+    margin-right: ${props => props.theme.space[3]}px;
     color: ${props => props.theme.colors.svgIcon};
   }
+  box-shadow: ${p => p.theme.shadows.mainCard};
 `;
 
 export const ProfileDescription = styled.div`
-  margin-bottom: ${props => props.theme.spacing(4)};
+  margin-bottom: ${props => props.theme.space[5]}px;
 `;
 
 export const ProfileAvatar = styled.img`
   width: 100px;
   height: 100px;
-  border-radius: 50%;
+  border-radius: ${p => p.theme.radii.round};
   background-color: ${props => props.theme.colors.avatar};
-  margin-top: ${props => props.theme.spacing(14)};
-  margin-bottom: ${props => props.theme.spacing(8)};
-  box-shadow: ${props => props.theme.boxShadow.secondaryCard};
+  margin-top: ${props => props.theme.space[6]}px;
+  margin-bottom: ${props => props.theme.space[5]}px;
 `;
 
 export const ProfileName = styled.p`
-  font-size: 20px;
-  font-weight: 900;
-  font-family: 'Armata';
-  margin-bottom: ${props => props.theme.spacing(3)};
+  font-size: ${p => p.theme.fontSizes.l};
+  font-weight: ${p => p.theme.fontWeights.bold};
+
+  margin-bottom: ${props => props.theme.space[4]}px;
 `;
 export const ProfileInfo = styled.p`
   display: flex;
@@ -41,7 +39,7 @@ export const ProfileInfo = styled.p`
   justify-content: center;
 
   &:not(:last-child) {
-    margin-bottom: ${props => props.theme.spacing(2)};
+    margin-bottom: ${props => props.theme.space[3]}px;
   }
 `;
 export const ProfileStats = styled.ul`

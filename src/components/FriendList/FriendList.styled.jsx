@@ -1,29 +1,19 @@
 import styled from '@emotion/styled';
 
-export const FriendsCard = styled.ul`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 300px;
-  background-color: ${props => props.theme.colors.cardBg};
-  border-radius: ${props => props.theme.spacing(1)};
-  padding: ${props => props.theme.spacing(2)} 0;
-`;
-
 export const FriendItem = styled.li`
   display: flex;
   align-items: center;
   width: 95%;
-  height: ${props => props.theme.spacing(17)};
-  border-radius: ${props => props.theme.spacing(1)};
+  height: 68px;
+  border-radius: ${props => props.theme.radii.normal};
   background-color: ${props => props.theme.colors.itemBg};
-  box-shadow: ${props => props.theme.boxShadow.secondaryCard};
+  box-shadow: ${p => p.theme.shadows.secondaryCard};
 
   &:nth-of-type(2n) {
     background-color: ${props => props.theme.colors.itemBgSecondary};
   }
   &:not(:last-child) {
-    margin-bottom: ${props => props.theme.spacing(3)};
+    margin-bottom: ${props => props.theme.space[3]}px;
   }
 `;
 function statusColor({ status }) {
@@ -36,20 +26,20 @@ export const OnlineMarker = styled.span`
   display: block;
   width: 16px;
   height: 16px;
-  border-radius: 50%;
+  border-radius: ${p => p.theme.radii.round};
   background-color: ${statusColor};
-  margin: 0 ${props => props.theme.spacing(4)};
-  box-shadow: ${props => props.theme.boxShadow.secondaryCard};
+  margin: 0 ${props => props.theme.space[4]}px;
+  box-shadow: ${p => p.theme.shadows.cardItem};
 `;
 
 export const FriendAvatar = styled.img`
   background-color: ${props => props.theme.colors.avatar};
-  border-radius: ${props => props.theme.spacing(2)};
-  padding: ${props => props.theme.spacing(1)};
-  margin-right: ${props => props.theme.spacing(2)};
-  box-shadow: ${props => props.theme.boxShadow.statItem};
+  border-radius: ${props => props.theme.radii.normal};
+  padding: ${props => props.theme.space[2]}px;
+  margin-right: ${props => props.theme.space[4]}px;
+  box-shadow: ${p => p.theme.shadows.cardItem};
 `;
 export const FriendName = styled.p`
-  font-weight: 600;
-  font-style: 18px;
+  font-weight: ${p => p.theme.fontWeights.bold};
+  font-size: ${p => p.theme.fontSizes.m};
 `;

@@ -1,10 +1,21 @@
 import PropTypes from 'prop-types';
 import { FriendListItem } from '../FriendList/FriendListItem/FriendListItem';
-import { FriendsCard } from './FriendList.styled';
+
+import { Box } from 'components/Box';
 
 export const FriendList = ({ friends }) => {
   return (
-    <FriendsCard>
+    <Box
+      as="ul"
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+      width={300}
+      bg="cardBg"
+      borderRadius="normal"
+      py={3}
+      boxShadow="mainCard"
+    >
       {friends.map(({ avatar, name, id, isOnline }) => (
         <FriendListItem
           key={id}
@@ -13,7 +24,7 @@ export const FriendList = ({ friends }) => {
           isOnline={isOnline}
         />
       ))}
-    </FriendsCard>
+    </Box>
   );
 };
 
