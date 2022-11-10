@@ -1,4 +1,4 @@
-export const theme = {
+export const theme = Object.freeze({
   colors: {
     cardBg: '#ffffff',
     itemBg: '#cad0fca8',
@@ -51,4 +51,4 @@ export const theme = {
   fonts: {
     Armata: 'Armata',
   },
-};
+});

@@ -7,7 +7,7 @@ import user from '../../data/user.json';
 import statDada from '../../data/data.json';
 import friends from '../../data/friends.json';
 import transactions from '../../data/transactions.json';
-import { Box } from 'components/Box';
+import { Box } from 'components/Box/Box';
 
 export const App = () => {
   return (
